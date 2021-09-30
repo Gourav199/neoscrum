@@ -187,7 +187,7 @@ h2 {
 
 .main {
   background: #f8f8f8;
-  padding: 150px 0; }
+  padding: 10px 0; }
 
 .clear {
   clear: both; }
@@ -588,5 +588,32 @@ label.valid {
   .social-label {
     margin-right: 0px;
     margin-bottom: 10px; } }
+
+    .txtimg{
+      width:40px
+    }
+    .txtcard{
+      box-shadow: 2px 5px;
+
+      border: 1px solid black;
+ 
+    }
+    .txt-addfeed-card{
+      border-radius: 10px;
+      border:1px solid black;
+      background-color: ;
+      
+      
+ 
+    }
+    .txt-dash{
+      margin:0;
+      padding:0;
+      overflow-x:hidden;
+
+    }
+    .txtimg-add{
+      width:60px
+    }
 
 /*# sourceMappingURL=style.css.map */

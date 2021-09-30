@@ -1,25 +1,46 @@
 
 import './App.css';
 
-import Registration from './registration';
-import { BrowserRouter, Link,Route, useHistory } from "react-router-dom";
-import LoginNeoScrum from "./login";
-import Dashboard from "./dashboard";
-import AddFeedback from "./addfeedback";
+import Registration from "./Component/registration";
+import { BrowserRouter as Router, Link,Route,Switch,Redirect, useHistory } from "react-router-dom";
+import LoginNeoScrum from './Component/login';
+import Dashboard_Neoscrum from './Component/dashboard-neoscrum';
+import AddFeedBackNeoScrum from './Component/addfeedback-neoscrum';
+import PageNotFound from './Component/error-404';
+// import { Switch } from '@material-ui/core';
 
 function App() {
   return (
+    
+
+    
     <div className="App">
-      {/* <Registration/> */}
-      <BrowserRouter>
-                {/* <Link   to="/login" class="signup-image-link" target="_blank">Login</Link>
-                <Link to ="/dashboard" class="signup-image-link">DashBoard</Link>
-                <Link to ="/addfeedback" class="signup-image-link">Add Feedback</Link> */}
-                <Route exact path="/login" component={LoginNeoScrum}></Route>
-                <Route exact path="/dashboard" component={Dashboard}></Route>
-                <Route exact path="/addfeedback" component={AddFeedback}></Route>
-        </BrowserRouter>   
+     
+    
+    <Router>
+    
+      <Switch>
+      <Route exact path="/">
+    <Redirect to="/login" component={LoginNeoScrum} />
+        </Route>
+
+       
+      <Route exact path="/login" component={LoginNeoScrum}/>
+      <Route exact path="/registration" component={Registration}/>
+      <Route exact path="/dashboard-neoscrum" component={Dashboard_Neoscrum}/>
+      <Route exact path="/addfeedback-neoscrum" component={AddFeedBackNeoScrum}/>
+     
+      
+      <Route component={PageNotFound} />
+        
+          
+      </Switch>
+    
+      
+      </Router>
+      
     </div>
+    
   );
 }
 
