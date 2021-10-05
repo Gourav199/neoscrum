@@ -1,4 +1,5 @@
-import react from  "react";
+import react from "react";
+
 /**
  * @author Gourav Tewary
  * @description this function helps to give user  feedback in card
@@ -7,35 +8,21 @@ import react from  "react";
  */
 const FeedbackCard =({data})=>{
     let feedback = data.feadback;
-  let no = data.no;
-  let name = data.name;
-    //console.log("fedback data",data);
+    
+    
+    let name = data.name;
+ // console.log(data);
     return(
-        <div className="col-3 m-3  txtcard">
-                    <div className="row pt-3 bg-primary m-2">
-                        <div className="col-6 text-start ">
-                        <p className="text-white">Feedback no : {no}</p>
-                        </div>
-                        <div className="col-6 text-end">
-                        
-                        </div>
-                    </div>
-                    <div className="row pt-3">
-                        <div className="col-8text-justify">
-                                <p className="text-justify">{feedback}</p>
-                        </div>
-                    </div>
-                    <div className="row pt-5 ">
-                        <div className="col-12   pt-3 text-end">
-                            <p >sent by : {name}</p>
-                        </div>
-                        <div className="col-12  text-end">
-                          
-                        </div>
-                    </div>
-                    
-                    
-                </div>
+      
+        <div className="card" rounded>
+            <div className="card-body ">
+            
+            <textarea style={{width:"85%",height:"50%",fontSize:"1.2em",resize: "none"}} className="card-subtitle mb-4 display-6 text-success">{feedback}</textarea>
+            <p className="card-text mt-2 pb-5 text-danger" style={{fontSize : "20px"}}>sent by : {name}</p>
+           
+            </div>
+      </div>
+      
     );
 }
 export default FeedbackCard;

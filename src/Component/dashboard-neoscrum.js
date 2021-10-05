@@ -83,7 +83,7 @@ const Dashboard_Neoscrum = ()=>{
               <div className="col-12">
                   <div className="row">
                     <div className="col-2 p-2">
-                        <img src ={targetUrl} className="rounded  txtimg align-left"/>&nbsp;<span className="text-white">{userName}</span>
+                        <img src ={targetUrl} className="rounded  txtimg align-left" style={{maxHeight:"50px"}}/>&nbsp;<span className="text-white">{userName}</span>
                     </div>
                     <div className="col-10 p-2">
                         <div className="row">
@@ -92,7 +92,7 @@ const Dashboard_Neoscrum = ()=>{
                                <button className="btn btn-primary" onClick={handlefeedbackchange}> Add Feedback</button>
                             </div>
                             <div className="col-2">
-                               <button onClick={handlelogout}>Logout</button>
+                               <button className="btn btn-danger" onClick={handlelogout}>Logout</button>
                             </div>
                         </div>
                         
@@ -111,6 +111,7 @@ const Dashboard_Neoscrum = ()=>{
                 :
                 
                 <>
+               
                     <h1>Currently no feedbacks</h1>
                 </>
 

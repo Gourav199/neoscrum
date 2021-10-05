@@ -36,3 +36,12 @@
     transform: rotate(360deg);
   }
 }
+.card{
+  border : 1px solid #fff;
+  box-shadow: 13px 10px 13px 1px #CAD5E2;
+  flex : 1;
+  margin: 15px;
+  border-radius: 40px;
+  background-color: #000;
+  max-height: 80%;
+}
